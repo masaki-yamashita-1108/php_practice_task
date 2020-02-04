@@ -1,0 +1,33 @@
+課題1
+・Viewは何をするところでしょうか。簡潔に説明してみてください。
+
+controllerの指示によってアクセスしてきたユーザーのブラウザに表示するデータ（html）を作成するところ。
+
+
+課題2
+・プログラマーがhtmlを書かずにPHPなどのプログラミング言語やフレームワークを使う必要があるのはどういった理由でしょうか。
+
+ユーザーによって表示する内容を変化させる必要がある場合等に、
+自身でhtmlファイルを作成するのではなく、テンプレートエンジンである「blade」を使用することで、対応することができる。
+(modelからユーザネーム等を参照し、取得する等)
+自身で記述する場合、決まったページしか表示することができない。
+
+
+課題3
+・【応用】 前々章でAdmin/ProfileControllerのadd Action, edit Action に次のように記述しました。
+
+  public function add()
+  {
+      return view('admin.profile.create');
+  }
+  public function edit()
+  {
+      return view('admin.profile.edit');
+  }
+  
+この場合、add Action と edit Action を描画するには、
+それぞれどこのディレクトリに何というbladeファイルを設置すれば良いでしょうか。
+
+
+resources/views/admin/profileディレクトリ配下にそれぞれ
+create.blade.php 、edit.blade.phpというファイル設置する。
